@@ -12,6 +12,7 @@ import android.graphics.Point;
 import android.view.Display;
 import android.util.Log;
 import android.widget.ImageView;
+import java.security.SecureRandom;
 
 import java.util.Random;
 
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     */
     void newGame() {
         Log.d("Debugging", "In newGame");
-        Random random = new Random();
+        Random random = new SecureRandom();
         subHorizontalPosition = random.nextInt(gridWidth);
         subVerticalPosition = random.nextInt(gridHeight);
         shotsTaken = 0;
